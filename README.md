@@ -72,6 +72,8 @@ The ` GlobalModal` consist of set method using which we can open and close the m
     3. pop
     4. add
     5. closeAll
+    6. len
+    7. popAndPush
 
 ##### 1. setUpModal
 
@@ -148,6 +150,30 @@ You can use this method to close all the modal that are opened. In order to simp
 
 ```jsx
 GlobalModal.closeAll()
+```
+
+##### 6. len
+
+You can use this method to get length of the modals that are currently opened. In order to simply get length of all modals that you have opened you can use like below:
+
+```jsx
+GlobalModal.len()
+```
+
+##### 7. popAndPush
+
+You can use this method to get best of the both worlds i.e., close the alreasy opened modal, and then open a new modal.
+
+```jsx
+  const openModal = async () => {
+    GlobalModal.popAndPush({
+      component: Component, //Component represent the component that you want to display inside the modal
+      title: "Modal title" //modal title
+      props: {   //props object are represented as the props to the component
+        data: data
+      }
+    })
+  }
 ```
 
 ### Examples
