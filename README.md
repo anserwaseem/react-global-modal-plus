@@ -1,17 +1,17 @@
 # React Global Modal Plus
 
-React Global Modal Plus is a lightweight, simple, customizable and ready to use modal in the global scope in the react project.
+React Global Modal Plus is a lightweight, customizable modal that can be globally accessed in a React app.
 
 ## Features
 
 - Lightweight
-- Build in simple modal, slide pane, confirmation modal and async confirmation modal
-- Fully constomizable and can be used with any UI framework
-- Invoked as a method so reduces the code base
-- Promotes reusability
+- Includes simple modal, slide pane, confirmation modal, and async confirmation modal
+- Highly customizable and compatible with any UI framework
+- Invoked as a method, reducing code redundancy
+- Encourages reusability
 - Easy to maintain
-- Enhance the performance as the main component never re-render when opening the modal
-- Multiple modal can be pushed on top of another
+- Improves performance by preventing the main component from re-rendering when opening a modal
+- Supports stacking multiple modals on top of each other
 
 ## Table of Contents
 
@@ -380,26 +380,24 @@ const Example = () => {
 }
 ```
 
-
 The confirmation modal can be used like above. It consist of list of properties which are descriped below:
 
-|   Props                       |  Types                            | Required             | Default        | Description                               |
-|   --------------------------  |  -------------------------------  | --------------------:| -------------: | -----------------------------------------:|
-| confirmationBody              |  React.FC                         |                      |                | Main component that will be displayed inside modal|
-| title                         | string                            |                      |                | It is the title of the confirmation modal |
-| message                       | string                            |                      |                |  It is the message that is display inside the body of the modal  |
-| onCancel                      | Function                          |                      |                | It is used to perfrom certain action when the user tigger the cancel action |
-|  onOkay                       | Function                          |                       |               | It is used to perform certain action when the user tigger the okay action |
-| cancelLabel                   | string                            |                      |                | onCancel action tittle                    |
-| okayLabel                     | string                            |                      |                | onOkay action title                       |
-| isCloseable                   | boolean                           |                      | true           | It indicate wheather the modal can be closed or not. If true, you can only close the modal manualy from the component inside the modal using the modal close method |
-| className                     | string                            |                      |                | It is used to provde the styles for outer most element of the modal |
-| confirmationClassName         | string                            |                      |                | It is used to provde the styles for inner most content of the modal |
-| actions                       | IButtonProps[]   | any[]                 |                      |                 | You can define your own custiom actions list |
-| footer                       | React.ReactNode                 |                      |                 | You can pass custom footer to the modal |
-|  okyActionProps              | Record<any,any>                 |                      |                 | Adjust the styling of the okay or positive action button. |
-| cancelActionProps            | Record<any,any>                 |                      |                 | Adjust the styling of the cancel or negative action button |
-
+| Props                 | Types           | Required | Default |                                                                                                                                                         Description |
+| --------------------- | --------------- | -------: | ------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -------------------------------------------- |
+| confirmationBody      | React.FC        |          |         |                                                                                                                  Main component that will be displayed inside modal |
+| title                 | string          |          |         |                                                                                                                           It is the title of the confirmation modal |
+| message               | string          |          |         |                                                                                                      It is the message that is display inside the body of the modal |
+| onCancel              | Function        |          |         |                                                                                         It is used to perfrom certain action when the user tigger the cancel action |
+| onOkay                | Function        |          |         |                                                                                           It is used to perform certain action when the user tigger the okay action |
+| cancelLabel           | string          |          |         |                                                                                                                                              onCancel action tittle |
+| okayLabel             | string          |          |         |                                                                                                                                                 onOkay action title |
+| isCloseable           | boolean         |          |    true | It indicate wheather the modal can be closed or not. If true, you can only close the modal manualy from the component inside the modal using the modal close method |
+| className             | string          |          |         |                                                                                                 It is used to provde the styles for outer most element of the modal |
+| confirmationClassName | string          |          |         |                                                                                                 It is used to provde the styles for inner most content of the modal |
+| actions               | IButtonProps[]  |    any[] |         |                                                                                                                                                                     | You can define your own custiom actions list |
+| footer                | React.ReactNode |          |         |                                                                                                                             You can pass custom footer to the modal |
+| okyActionProps        | Record<any,any> |          |         |                                                                                                           Adjust the styling of the okay or positive action button. |
+| cancelActionProps     | Record<any,any> |          |         |                                                                                                          Adjust the styling of the cancel or negative action button |
 
 ## Async Confirmation Modal
 
@@ -433,20 +431,20 @@ export default Example
 
 The async confirmation modal can be used like above. It consist of list of properties which are descriped below:
 
-|   Props                       |  Types                            | Required             | Default        | Description                               |
-|   --------------------------  |  -------------------------------  | --------------------:| -------------: | -----------------------------------------:|
-| confirmationBody              |  React.FC                         |                      |                | Main component that will be displayed inside modal|
-| title                         | string                            |                      |                | It is the title of the confirmation modal |
-| message                       | string                            |                      |                |  It is the message that is display inside the body of the modal  |
-| cancelLabel                   | string                            |                      |                | onCancel action tittle                    |
-| okayLabel                     | string                            |                      |                | onOkay action title                       |
-| isCloseable                   | boolean                           |                      | true           | It indicate wheather the modal can be closed or not. If true, you can only close the modal manualy from the component inside the modal using the modal close method |
-| className                     | string                            |                      |                | It is used to provde the styles for outer most element of the modal |
-| confirmationClassName         | string                            |                      |                | It is used to provde the styles for inner most content of the modal |
-| actions                       | IButtonProps[]   | any[]                 |                      |                 | You can define your own custiom actions list |
-| footer                       | React.ReactNode                 |                      |                 | You can pass custom footer to the modal |
-|  okyActionProps              | Record<any,any>                 |                      |                 | Adjust the styling of the okay or positive action button. |
-| cancelActionProps            | Record<any,any>                 |                      |                 | Adjust the styling of the cancel or negative action button |
+| Props                 | Types           | Required | Default |                                                                                                                                                         Description |
+| --------------------- | --------------- | -------: | ------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -------------------------------------------- |
+| confirmationBody      | React.FC        |          |         |                                                                                                                  Main component that will be displayed inside modal |
+| title                 | string          |          |         |                                                                                                                           It is the title of the confirmation modal |
+| message               | string          |          |         |                                                                                                      It is the message that is display inside the body of the modal |
+| cancelLabel           | string          |          |         |                                                                                                                                              onCancel action tittle |
+| okayLabel             | string          |          |         |                                                                                                                                                 onOkay action title |
+| isCloseable           | boolean         |          |    true | It indicate wheather the modal can be closed or not. If true, you can only close the modal manualy from the component inside the modal using the modal close method |
+| className             | string          |          |         |                                                                                                 It is used to provde the styles for outer most element of the modal |
+| confirmationClassName | string          |          |         |                                                                                                 It is used to provde the styles for inner most content of the modal |
+| actions               | IButtonProps[]  |    any[] |         |                                                                                                                                                                     | You can define your own custiom actions list |
+| footer                | React.ReactNode |          |         |                                                                                                                             You can pass custom footer to the modal |
+| okyActionProps        | Record<any,any> |          |         |                                                                                                           Adjust the styling of the okay or positive action button. |
+| cancelActionProps     | Record<any,any> |          |         |                                                                                                          Adjust the styling of the cancel or negative action button |
 
 ## Full customization with different UI framework
 
